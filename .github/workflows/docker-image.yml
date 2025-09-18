@@ -17,9 +17,9 @@ jobs:
       - name: Connect to VPS via SSH and deploy Docker
         uses: appleboy/ssh-action@v0.1.10
         with:
-          host: ${{ secrets.VPS_HOST }}
-          username: ${{ secrets.VPS_USER }}
-          key: ${{ secrets.VPS_SSH_KEY }}
+          host: ${{ variables.IP }}
+          username: ${{ variables.USERNAME }}
+          key: ${{ secrets.P_KEY }}
           script: |
             cd ~/myapp  # go to your project directory on the VPS
             git pull origin main
