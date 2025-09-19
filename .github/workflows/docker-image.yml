@@ -2,9 +2,9 @@ name: Deploy to VPS with Docker
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "m" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "m" ]
 
 jobs:
   deploy:
